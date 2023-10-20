@@ -18,12 +18,10 @@ async function select_box(id_default) {
             if (id_default==query_data.rows[i].id)
             str+=`<option selected value=${query_data.rows[i].id}>${query_data.rows[i].name}</option>`
             else str+=`<option value=${query_data.rows[i].id}>${query_data.rows[i].name}</option>`
-
     }
     str+=`</select>
     <input name="abcdef" type="submit" value="Submit">
   </form>`
-  // console.log(str)
     return str;
 }
 module.exports = select_box;

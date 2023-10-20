@@ -1,9 +1,8 @@
 var pg_conn=require("./pg_config");
 
-
+    
 async function admin_table_string(shop_id,role){
     let disable="";
-    // console.log("inside"+role);
     if (role=="director") disable="disabled"
     if(shop_id==0){
         var product_query='SELECT * FROM product ORDER BY id'

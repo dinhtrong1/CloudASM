@@ -10,12 +10,9 @@ var router = express.Router();
 /* GET users listing. */
 router.get('/', async function (req, res, next) {
   // res.send('respond with a resource');
-
   ss = req.session
-  // console.log("1"+ss.role)
   if (ss.role == 'director') {
     let shopdetail = await shop(ss.shopid);
-    // let tempo3= await product(tempo2.id);
     let select_box_string = await select_box(0);
     let table_string2 = await admin_table_string(0,ss.role);
     res.render('admin', {
@@ -44,6 +41,4 @@ router.post('/select_shop', async function (req, res, next) {
     table: table_string2
   });
 });
-
-
 module.exports = router;

@@ -7,7 +7,6 @@ router.get('/', function(req, res, next) {
   if(ss.role=='shop') res.redirect('/users')
   else if (ss.role=='director')res.redirect('/admin')
   else res.render('login', { title: 'login', });
-
 });
 
 

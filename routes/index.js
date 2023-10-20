@@ -11,14 +11,12 @@ const editform = require('../models/editform');
 const deleteProduct = require('../models/deleteProduct');
 var router = express.Router();
 var ss;
-// hoductan
 /* GET home page. */
 
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'login page', });
 });
 router.post('/edit_:id', async function (req, res, next) {
-  // console.log(req.params.id)
   let tempo= await editform(req.params.id)
   res.render('edit', { editform:tempo, });
 });
