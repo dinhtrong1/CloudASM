@@ -19,5 +19,4 @@ if(query_data.rowCount==1)
 }
 return [authenticated,shopid,role];
 }
-
 module.exports=authen;
