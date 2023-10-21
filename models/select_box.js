@@ -20,7 +20,7 @@ async function select_box(id_default) {
             else str+=`<option value=${query_data.rows[i].id}>${query_data.rows[i].name}</option>`
     }
     str+=`</select>
-    <input name="abcdef" type="submit" value="Submit">
+    <input type="submit" value="Submit">
   </form>`
     return str;
 }
