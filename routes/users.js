@@ -29,8 +29,8 @@ router.get('/functions', async function (req, res, next) {
 });
 router.post('/functions', async function (req, res, next) {
   ss=req.session
-  console.log(ss)
-  console.log(req.body)
+  //console.log(ss)
+  //console.log(req.body)
   let func = req.body.btt
   if (func == 'delete') await deleteProduct(req.body.id)
   else await updateProduct(func, req.body.id, req.body.name, req.body.price, req.body.quantity, req.body.shop, req.body.defid)
