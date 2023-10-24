@@ -27,6 +27,7 @@ router.get('/', async function(req, res, next) {
 router.get('/functions', async function (req, res, next) {
   res.redirect('/login')
 });
+
 router.post('/functions', async function (req, res, next) {
   ss=req.session
   console.log(ss)
