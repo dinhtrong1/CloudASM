@@ -21,7 +21,6 @@ router.get('/', async function(req, res, next) {
   }
   else  if (ss.role=='director')res.redirect('/admin')
   else res.redirect('/login')
-
 });
 
 router.get('/functions', async function (req, res, next) {

@@ -11,7 +11,7 @@ async function updateProduct(func, id, name, price, quantity, shop, defid) {
         try{
             query_data = await pg_conn.query(acc_query);
             }catch(err) {
-                console.log("error", 'thông tin nhâp không hơp lệ');            
+                console.log("error", 'loi');            
               }
     }
     else {

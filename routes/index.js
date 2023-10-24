@@ -40,15 +40,6 @@ router.post('/login', async function (req, res, next) {
     ss.shopid=shopid
     ss.role=role
     res.redirect('/users')
-    // console.log(ss)
-    // let tempo2 = await shop(ss.shopid);
-    // // let tempo3= await product(tempo2.id);
-    // let table = await table_string(shopid);
-    // res.render('users', {
-    //   title: 'users', name: req.body.username,
-    //   shop: tempo2,
-    //   table: table
-    // });
   }
   else if (tempo == true && role=='director') {
     ss=req.session
@@ -56,19 +47,6 @@ router.post('/login', async function (req, res, next) {
     ss.shopid=0;
     ss.role=role
     res.redirect('/admin')
-
-    // let tempo2 = await shop(req.body.username, req.body.password);
-    // let tempo3= await product(tempo2.id);
-    // let table = await table_string(tempo2.id);
-    // let select_box_string= await select_box(0);
-    // let table_string2= await admin_table_string(0);
-  
-    //   res.render('admin', {
-    //     title: 'admin', 
-    //     name: req.body.username,
-    //     select_box:select_box_string,
-    //     table:table_string2
-    //   });
   }
   else res.redirect('/login');
 });
