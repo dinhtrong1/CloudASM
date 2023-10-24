@@ -1,6 +1,4 @@
-var pg_conn=require("./pg_config");
-
-    
+var pg_conn=require("./pg_config");    
 async function admin_table_string(shop_id,role){
     let disable="";
     if (role=="director") disable="disabled"
